@@ -78,11 +78,9 @@ pipeline {
                 }
             }
         }
-
-        stage {
-            post {
-              always {
-                emailext attachLog: true,
+        post {
+           always {
+              emailext attachLog: true,
                     subject: "'${currentBuild.result}'",
                     body: "Project: ${env.JOB_NAME}<br/>" +
                             "Build Number: ${env.BUILD_NUMBER}<br/>" +
@@ -91,9 +89,8 @@ pipeline {
                     attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             }
         }
-    }
-}
-}
+ }
+
 
 
 
