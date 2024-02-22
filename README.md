@@ -1,2 +1,7 @@
-# reddit-clone
-to luanch an app similar to reddit
+# Reddit Clone App on Kubernetes
+Test 200
+
+
+
+
+
