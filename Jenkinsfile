@@ -79,8 +79,9 @@ pipeline {
             }
         }
 
-        post {
-            always {
+        stage {
+            post {
+              always {
                 emailext attachLog: true,
                     subject: "'${currentBuild.result}'",
                     body: "Project: ${env.JOB_NAME}<br/>" +
@@ -92,7 +93,7 @@ pipeline {
         }
     }
 }
-
+}
 
 
 
